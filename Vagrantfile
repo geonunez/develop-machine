@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "01.php7.sh"
   config.vm.provision "shell", path: "10.docker.sh"
   config.vm.provision "shell", path: "10.composer.sh"
+  config.vm.provision "shell", path: "20.sublime.sh"
   config.vm.provision "shell", path: "99.system.sh"
 end

@@ -16,4 +16,5 @@ sudo apt-get install -y \
     php7.0 \
     php7.0-mbstring \
     php7.0-xml \
-    php7.0-zip 
+    php7.0-zip \
+    --no-install-recommends

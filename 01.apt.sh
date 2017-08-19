@@ -1,14 +1,20 @@
 #!/bin/bash
 
+### Update
 sudo apt-get update
+
+### Upgrade
 sudo apt-get upgrade -y
+
+### Install 
 sudo apt-get install -y \
     apt-transport-https\
     ca-certificates \
     curl \
-    wget\
-    git\
-    gnupg2\
+    wget \
+    git \
+    vim \
+    gnupg2 \
     software-properties-common \
     xserver-xorg \
     xserver-xorg-core \
@@ -18,9 +24,9 @@ sudo apt-get install -y \
     gnome-session \
     gnome-shell \
     gnome-themes \
-    gnome-terminal \
     gnome-control-center \
     nautilus \
     gnome-icon-theme \
     gdm3 \
+    terminator \
     --no-install-recommends
