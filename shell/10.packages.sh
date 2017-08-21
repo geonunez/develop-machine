@@ -14,19 +14,10 @@ sudo apt-get install -y \
     wget \
     git \
     vim \
+    zsh \
     gnupg2 \
     software-properties-common \
-    xserver-xorg \
-    xserver-xorg-core \
-    xfonts-base xinit \
-    libgl1-mesa-dri \
-    x11-xserver-utils \
-    gnome-session \
-    gnome-shell \
-    gnome-themes \
-    gnome-control-center \
-    nautilus \
-    gnome-icon-theme \
-    gdm3 \
-    terminator \
+    nfs-common \
+    nfs-kernel-server \
+    build-essential \
     --no-install-recommends

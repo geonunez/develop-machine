@@ -4,18 +4,18 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
 
-  config.vm.network "forwarded_port", guest: 80, host: 80
-  config.vm.network "private_network", ip: "192.168.12.24"
+  config.vm.network "private_network", ip: "192.168.24.2", netmask:"255.255.255.252"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.gui = true
-    vb.memory = "2048"
+    vb.memory = "1024"
   end
 
-  config.vm.provision "shell", path: "01.apt.sh"
-  config.vm.provision "shell", path: "01.php7.sh"
-  config.vm.provision "shell", path: "10.docker.sh"
-  config.vm.provision "shell", path: "10.composer.sh"
-  config.vm.provision "shell", path: "20.sublime.sh"
-  config.vm.provision "shell", path: "99.system.sh"
+  config.vm.provision "shell", path: "shell/10.packages.sh"
+  config.vm.provision "shell", path: "shell/10.php7.sh"
+  config.vm.provision "shell", path: "shell/20.composer.sh"
+  config.vm.provision "shell", path: "shell/20.docker.sh"
+  config.vm.provision "shell", path: "shell/20.nodejs.sh"
+  config.vm.provision "shell", path: "shell/20.zsh.sh"
+  config.vm.provision "shell", path: "shell/90.miscellaneous.sh"
+  config.vm.provision "shell", path: "shell/90.nfs.sh"
 end

@@ -8,22 +8,33 @@ For that reason I create a debian machine with docker to run it completly inside
 
 ### INSTALATION 
 
-1. Install vagrant on your machine. [Vagrant Page](https://www.vagrantup.com)
-2. Install vagrant-vbguest plugin. [Official Repository](https://github.com/dotless-de/vagrant-vbguest)
-```bash
-$ vagrant plugin install vagrant-vbguest
-```
-3. Clone this project
+1. Install VirtualBox. [Oracle VM VirtualBox](https://www.virtualbox.org)
+1. Install vagrant. [HashiCorp Vagrant](https://www.vagrantup.com)
+2. Clone this project
 ```bash
 $ git clone git@github.com:geonunez/develop-machine.git <path>
 ```
-4. Run Vagrant and enjoy
+3. Run Vagrant and enjoy
 ```bash
 $ cd <path>
 $ vagrant up
 ```
 
-### Note
-I use the folder '/vagrant' in the host machine as a symlink to my project folders.
+### WHAT THIS MACHINE HAS?
 
+1. ZSH
+2. Oh-My-ZSH
+3. Docker
+4. Docker-compose
+5. PHP7.0
+6. Composer
+7. NodeJS
 
+### SHARED FOLDER
+The main reason why docker-machine has problems with permissions is because your projects folders are at the host machine. That's why I create this machine thinking that your projects were store inside this machine. Look in this way, if you have to move to other machine, you only need to copy and paste the virtual machine.
+
+#### Mounting the shared folder 
+Open the terminal and use this command.
+```bash
+$ sudo mount -o resvport,rw,sync -t nfs 192.168.2.2:/home/vagrant/projects <Your Project Folder>
+``` 
