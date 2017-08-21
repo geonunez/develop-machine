@@ -36,5 +36,5 @@ The main reason why docker-machine has problems with permissions is because your
 #### Mounting the shared folder 
 Open the terminal and use this command.
 ```bash
-$ sudo mount -o resvport,rw,sync -t nfs 192.168.2.2:/home/vagrant/projects <Your Project Folder>
+$ sudo mount -o resvport,rw,sync -t nfs 192.168.24.2:/home/vagrant/projects <Your Project Folder>
 ``` 
