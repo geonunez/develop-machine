@@ -22,13 +22,11 @@ $ vagrant up
 
 ### WHAT THIS MACHINE HAS?
 
-1. ZSH
-2. Oh-My-ZSH
-3. Docker
-4. Docker-compose
-5. PHP7.0
-6. Composer
-7. NodeJS
+1. Docker
+2. Docker-compose
+3. PHP7.0
+4. Composer
+5. NodeJS
 
 ### SHARED FOLDER
 The main reason why docker-machine has problems with permissions is because your projects folders are at the host machine. That's why I create this machine thinking that your projects were store inside this machine. Look in this way, if you have to move to other machine, you only need to copy and paste the virtual machine.
