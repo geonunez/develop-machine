@@ -17,4 +17,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "shell/20.nodejs.sh"
   config.vm.provision "shell", path: "shell/90.nfs.sh"
   config.vm.provision "shell", path: "shell/90.miscellaneous.sh"
+
+  config.vm.provision "file", source: "~/.ssh", destination: "~vagrant/.ssh_host"
 end
