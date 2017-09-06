@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", path: "shell/10.packages.sh"
   config.vm.provision "shell", path: "shell/10.php7.sh"
+  config.vm.provision "shell", path: "shell/10.python.sh"
   config.vm.provision "shell", path: "shell/20.composer.sh"
   config.vm.provision "shell", path: "shell/20.docker.sh"
   config.vm.provision "shell", path: "shell/20.nodejs.sh"
